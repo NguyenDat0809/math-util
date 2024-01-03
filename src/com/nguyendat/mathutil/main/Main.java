@@ -27,6 +27,10 @@ public class Main {
         //So sánh để bt kết quả xem có đúng như kì vọng ko
         long expected = 120; //kì vọng nếu tính 5!
         int n = 5; //input
+//        long actual = MathUtil.getFactorial(n);
+//        System.out.println("5! = "+ expected +" expected");
+//        System.out.println("5! = "+ actual + " actual");
+        
         long actual = MathUtil.getFactorial(n);
         System.out.println("5! = "+ expected +" expected");
         System.out.println("5! = "+ actual + " actual");

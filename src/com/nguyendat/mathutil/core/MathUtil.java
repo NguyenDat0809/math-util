@@ -20,14 +20,23 @@ public class MathUtil {
     //giai thừa tăng rất nhanh
     //20 giai thừa 18 con số 0, vừa đủ cho kiểu long -> 21 giai thừa tràn kiểu long
     //bài này quy ước tính n! từ 0..20
+//    public static long getFactorial(int n){
+//        if(n < 0 || n >20)
+//            throw new IllegalArgumentException("invalid agrument. N must be between 0..20");
+//        if(n == 0 || n == 1)
+//            return 1; //nhận các giá trị đặc biệt thì trả về lun
+//        long result = 1;
+//        for (int i = 2; i <= n; i++) 
+//            result *= i;
+//        return result;
+//    }
+    
+    //Đệ quy code - RECURSION
     public static long getFactorial(int n){
         if(n < 0 || n >20)
             throw new IllegalArgumentException("invalid agrument. N must be between 0..20");
         if(n == 0 || n == 1)
-            return 1; //nhận các giá trị đặc biệt thì trả về lun
-        long result = 1;
-        for (int i = 2; i <= n; i++) 
-            result *= i;
-        return result;
+            return 1; 
+        return n* getFactorial(n-1);
     }
 }
